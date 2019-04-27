@@ -1,0 +1,326 @@
+
+html,
+body {
+	height: auto;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/* head (f**king so long) */
+#global_header {
+	background: #171a21;
+	background-position: center top;
+	min-width: 940px;
+
+	font-family: "Motiva Sans", Sans-serif;
+	font-weight: normal;
+	/* normal */
+
+	font-size: 14px;
+}
+
+#gb_content {
+	background: #171a21;
+	position: relative;
+	width: 940px;
+	height: 104px;
+	margin: 0px auto;
+	z-index: 402;
+}
+
+#gb_logo {
+	float: left;
+	padding-top: 30px;
+	margin-right: 40px;
+	width: 176px;
+	height: 44px;
+}
+
+#gb_container {
+	position: absolute;
+	left: 200px
+}
+
+#gb_menuitem {
+	display: block;
+	position: relative;
+
+	padding-top: 45px;
+	padding-left: 7px;
+	padding-right: 7px;
+	padding-bottom: 7px;
+	line-height: 16px;
+
+	text-decoration: none;
+	float: left;
+	font-size: 14px;
+	color: #b8b6b4;
+	text-transform: uppercase;
+	font-family: "Motiva Sans", Sans-serif;
+
+	font-size: 14px;
+}
+
+#gb_menuitem:hover {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+#supernav_content1 {
+	max-width: 132px;
+	background: #000 url(dd_web.jpg) top left no-repeat;
+	padding: 5px 5px 5px 5px;
+	margin: 0px;
+	box-shadow: 3px 3px 5px -3px #000;
+	text-align: left;
+
+
+	position: absolute;
+	z-index: 1500;
+	opacity: 0;
+	left: 1px;
+	top: 64px;
+	pointer-events: all;
+}
+
+#supernav_content1>a {
+	display: block;
+	padding: 6px 0;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+#supernav_content1>a:hover {
+	color: #4897cf;
+	text-decoration: none;
+}
+
+#supernav_content2 {
+	max-width: 132px;
+	background: #000 url(dd_web.jpg) top left no-repeat;
+	padding: 5px 5px 5px 5px;
+	box-shadow: 3px 3px 5px -3px #000;
+	margin: 0px;
+	text-align: left;
+	z-index: 500;
+
+	position: absolute;
+	z-index: 1500;
+	opacity: 0;
+	left: 59px;
+	top: 64px;
+	pointer-events: none;
+}
+
+#supernav_content2>a {
+	display: block;
+	padding: 6px 0;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+#supernav_content2>a:hover {
+	color: #4897cf;
+	text-decoration: none;
+}
+
+#submenuitem {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 11px;
+	color: #b8b6b4;
+	padding-right: 10px;
+
+	display: block;
+	padding: 6px 0;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+#submenuitem:hover {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+div#global_actions {
+	position: absolute;
+	right: 0px;
+	top: 6px;
+
+	height: 21px;
+	line-height: 21px;
+
+	color: #b8b6b4;
+	font-size: 11px;
+
+	z-index: 401;
+
+}
+
+div#global_actions #global_action_menu {
+	line-height: 24px;
+	vertical-align: top;
+	display: inline-block;
+}
+
+.header_installsteam_btn {
+	display: inline-block;
+	position: relative;
+	height: 21px;
+	line-height: 24px;
+	margin-right: 3px;
+}
+
+.header_installsteam_btn_green .header_installsteam_btn_content {
+	background-color: #5c7e10;
+}
+
+.header_installsteam_btn_content {
+	display: inline-block;
+	padding-left: 35px;
+	padding-right: 9px;
+	background-position: 10px 5px;
+
+	background-image: url(btn_header_installsteam_download.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	color: #e5e4dc;
+	font-weight: normal;
+}
+
+/* content */
+#global_content {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	background-image: url(ice.jpg);
+	background-repeat: repeat-x;
+	background-position-x: center;
+}
+
+#content_box {
+	position: relative;
+	height: 100vh;
+	width: 62.5rem;
+	margin: 0px auto;
+	padding: 0px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+#infobox {
+	height: 15em;
+	width: inherit;
+	background-image: url(profile_header_bg_texture.jpg);
+	background-repeat: no-repeat;
+	background-position-x: center;
+}
+
+#avatar {
+	display: inline-block;
+	height: 13em;
+	width: 13em;
+	margin-left: 20px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+#my_position {
+	display: inline-block;
+	position: absolute;
+	left: 16.5em;
+	top: 5.5em;
+	color: #CBCBCB;
+}
+
+#steam_level1 {
+	width: 268px;
+	height: 30px;
+	position: absolute;
+	right: 30px;
+	top: 87px;
+	font-size: 30px;
+	font-family: "times new roman";
+	color: #CBCBCB;
+}
+
+#steam_level2 {
+	width: 268px;
+	height: 32px;
+	position: absolute;
+	right: -65px;
+	top: 86px;
+	font-size: 30px;
+	font-family: "times new roman";
+	color: #CBCBCB;
+	background-image: url(levels_hexagons.png);
+	background-repeat: no-repeat;
+	background-position: 0px -224px;
+}
+
+/* screen shot */
+#pic {
+	height: 29em;
+	width: inherit;
+}
+
+#pic>a {
+	color: #cbcbcb;
+}
+
+#pic>a:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#screenshot1 {
+	width: 34.375rem;
+	height: 13.75rem;
+	position: absolute;
+	top: 18.625rem;
+	left: 4.25rem;
+}
+
+#screenshot1>a>img:hover {
+	border: 1px solid #cbcbcb;
+}
+
+#screenshot2 {
+	width: 34.375rem;
+	height: 13.75rem;
+	position: absolute;
+	top: 18.625rem;
+	left: 32.25rem;
+}
+
+#screenshot2>a>img:hover {
+	border: 1px solid #cbcbcb;
+}
+
+#screenshot3 {
+	width: 34.375rem;
+	height: 13.75rem;
+	position: absolute;
+	top: 33.625rem;
+	left: 4.25rem;
+}
+
+#screenshot3>a>img:hover {
+	border: 1px solid #cbcbcb;
+}
+
+#screenshot4 {
+	width: 33.375rem;
+	height: 13.75rem;
+	position: absolute;
+	top: 33.625rem;
+	left: 32.25rem;
+}
+
+#screenshot4>a>img:hover {
+	border: 1px solid #cbcbcb;
+}
