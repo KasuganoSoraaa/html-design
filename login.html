@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="login-css.css" />
+		<title>Steam Login</title>
+		<script type="text/javascript">
+			var flagover1 = -1
+			var flagout1 = -1
+			var flagover2 = -1
+			var flagout2 = -1
+
+			function MouseOver1(num) {
+				flagover1 = num;
+				var nmsl = document.getElementById("supernav_content1");
+				nmsl.style.opacity = "1";
+				nmsl.style.pointerEvents = "auto";
+			}
+
+			function excute1() {
+				if (flagover1 == flagout1) {
+					window.setTimeout("delay1()", 50);
+				}
+			}
+
+			function MouseOut1(num) {
+				flagout1 = num;
+				window.setTimeout("excute1()", 20);
+				flagout1 = -1
+				flagover1 = -1
+			}
+
+			function delay1() {
+				var nmsl = document.getElementById("supernav_content1");
+				nmsl.style.opacity = "0";
+				nmsl.style.pointerEvents = "none";
+			}
+
+			function MouseOver2(num) {
+				flagover2 = num;
+				var nmsl = document.getElementById("supernav_content2");
+				nmsl.style.opacity = "1";
+				nmsl.style.pointerEvents = "auto";
+			}
+
+			function excute2() {
+				if (flagover2 == flagout2) {
+					window.setTimeout("delay2()", 50);
+				}
+			}
+
+			function MouseOut2(num) {
+				flagout2 = num;
+				window.setTimeout("excute2()", 20);
+				flagout2 = -1
+				flagover2 = -1
+			}
+
+			function delay2() {
+				var nmsl = document.getElementById("supernav_content2");
+				nmsl.style.opacity = "0";
+				nmsl.style.pointerEvents = "none";
+			}
+
+
+			var userArr = [{
+				username: "ZhuRui",
+				password: "19260817"
+			}, {
+				username: "Kasugano",
+				password: "Sora"
+			}];
+
+			function loginfunc() {
+				var uname = document.querySelector("#username").value;
+				var pword = document.querySelector("#passwd").value;
+				/* console.log(uname)
+				console.log(pword) */
+				for (var i = 0; i < userArr.length; i++) {
+					if (userArr[i].username == uname && userArr[i].password == pword) {
+						window.localStorage.setItem("username", uname);
+						window.location.href = "./steam.html";
+						break;
+					}
+				}
+
+				if (i == userArr.length) {
+					alert("Invalid input，try again！")
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="global_header">
+			<div id="gb_content">
+				<div id="gb_logo">
+					<img src="globalheader_logo.png" width="176" height="44">
+				</div>
+				<div id="gb_container">
+					<a id="gb_menuitem" onmouseover="MouseOver1(1)" onmouseout="MouseOut1(1)" href="https://store.steampowered.com/">store</a>
+					<a id="gb_menuitem" onmouseover="MouseOver2(2)" onmouseout="MouseOut2(2)" href="https://steamcommunity.com/">community</a>
+					<a id="gb_menuitem" href="https://store.steampowered.com/about/">about</a>
+					<a id="gb_menuitem" href="https://help.steampowered.com/en/">support</a>
+					<div id="supernav_content1">
+						<div style="width: 132px; height: 168px;">
+							<a id="submenuitem" href="https://store.steampowered.com/" onmouseover="MouseOver1(2)" onmouseout="MouseOut1(2)">Featured</a>
+							<a id="submenuitem" href="https://store.steampowered.com/explore/" onmouseover="MouseOver1(2)" onmouseout="MouseOut1(2)">Explore</a>
+							<a id="submenuitem" href="https://store.steampowered.com/curators/" onmouseover="MouseOver1(2)" onmouseout="MouseOut1(2)">Curators</a>
+							<a id="submenuitem" href="https://steamcommunity.com/my/wishlist/" onmouseover="MouseOver1(2)" onmouseout="MouseOut1(2)">Wishlist</a>
+							<a id="submenuitem" href="https://store.steampowered.com/news/" onmouseover="MouseOver1(2)" onmouseout="MouseOut1(2)">News</a>
+							<a id="submenuitem" href="https://store.steampowered.com/stats/" onmouseover="MouseOver1(2)" onmouseout="MouseOut1(2)">Stats</a>
+						</div>
+					</div>
+					<div id="supernav_content2">
+						<div style="width: 132px; height: 140px;">
+							<a id="submenuitem" href="https://steamcommunity.com/" onmouseover="MouseOver2(2)" onmouseout="MouseOut2(2)">Home</a>
+							<a id="submenuitem" href="https://steamcommunity.com/discussions/" onmouseover="MouseOver2(2)" onmouseout="MouseOut2(2)">Discussions</a>
+							<a id="submenuitem" href="https://steamcommunity.com/workshop/" onmouseover="MouseOver2(2)" onmouseout="MouseOut2(2)">Workshop</a>
+							<a id="submenuitem" href="https://steamcommunity.com/market/" onmouseover="MouseOver2(2)" onmouseout="MouseOut2(2)">Market</a>
+							<a id="submenuitem" href="https://steamcommunity.com/?subsection=broadcasts" onmouseover="MouseOver2(2)"
+							 onmouseout="MouseOut2(2)">Broadcasts</a>
+						</div>
+					</div>
+				</div>
+				<div id="global_actions">
+					<div id="global_actions_menu">
+						<div class="header_installsteam_btn header_installsteam_btn_green">
+							<a class="header_installsteam_btn_content" href="https://store.steampowered.com/about/">Install Steam</a>
+							<a style="font-size: 11px; color: #b8b6b4; margin-right: 5px; margin-left: 5px; text-decoration: none;" href="">login</a>
+							&nbsp;|&nbsp;
+							<a style="font-size: 11px; color: #b8b6b4; margin-right: 5px; margin-left: 5px; text-decoration: none;" href="">language</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="wds">
+			<video id="background_mov" src="./log.webm" data-autoplay autoplay loop">
+
+			</video>
+			<form action="">
+				<h1>Sign in</h1>
+				<h3>To an existing Steam account</h3>
+				<br>
+				<div class="username">
+					<div class="t">Steam username</div>
+					<input type="text" class="input" id="username" value="" placeholder="" style="color:black">
+				</div>
+				<div class="username">
+					<div class="t">Password</div>
+					<input type="password" class="input" id="passwd" value="" placeholder="" style="color:black">
+				</div>
+				<div class="login" onclick="loginfunc()">Sign in</div>
+			</form>
+		</div>
+	</body>
+</html>
